@@ -20,3 +20,4 @@ what they can get away with.
 
 The "[Hard]" annotation makes me think that's not what
 this question was to provide.
+I can't google up any other solutions than a bubble sort.
