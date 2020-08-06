@@ -1,0 +1,31 @@
+package main
+
+import (
+	"fmt"
+	"log"
+	"os"
+	"strconv"
+)
+
+func main() {
+	i, err := strconv.Atoi(os.Args[1])
+	if err != nil {
+		log.Fatal(err)
+	}
+	j, err := strconv.Atoi(os.Args[2])
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	var lst []int
+	for _, str := range os.Args[3:] {
+		n, err := strconv.Atoi(str)
+		if err == nil {
+			lst = append(lst, n)
+		}
+	}
+
+	fmt.Printf("List: %v\n", lst)
+	reverse(lst, i, j)
+	fmt.Printf("List: %v\n", lst)
+}
